@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>在 iDevice 上執行 React Native（不需付費） · JIGSAWYE</title><meta name="description" content="在 iDevice 上執行 React Native（不需付費） - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="之前在練著寫 React Native 時詢問過開發 iOS 的朋友，能不能將 App 燒至自己的裝置上。當時好像因為 Apple 規範的關係，必須加入 Developer Program 並 年付 $99 取得憑證才行。而因為我沒有打算上架到 App Store 上所以只好放棄付錢作罷。
+最近剛好想寫一些自己的工具，又試著上網找了一下資料，發現在 XCode 7 之後已經開放未付費也可以燒至裝置">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="在 iDevice 上執行 React Native（不需付費）">
+<meta property="og:url" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/index.html">
+<meta property="og:site_name" content="JIGSAWYE">
+<meta property="og:description" content="之前在練著寫 React Native 時詢問過開發 iOS 的朋友，能不能將 App 燒至自己的裝置上。當時好像因為 Apple 規範的關係，必須加入 Developer Program 並 年付 $99 取得憑證才行。而因為我沒有打算上架到 App Store 上所以只好放棄付錢作罷。
+最近剛好想寫一些自己的工具，又試著上網找了一下資料，發現在 XCode 7 之後已經開放未付費也可以燒至裝置">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/01.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/02.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/03.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/04.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/05.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/06.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/07.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/08.png">
+<meta property="og:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/09.png">
+<meta property="og:updated_time" content="2016-02-04T06:06:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在 iDevice 上執行 React Native（不需付費）">
+<meta name="twitter:description" content="之前在練著寫 React Native 時詢問過開發 iOS 的朋友，能不能將 App 燒至自己的裝置上。當時好像因為 Apple 規範的關係，必須加入 Developer Program 並 年付 $99 取得憑證才行。而因為我沒有打算上架到 App Store 上所以只好放棄付錢作罷。
+最近剛好想寫一些自己的工具，又試著上網找了一下資料，發現在 XCode 7 之後已經開放未付費也可以燒至裝置">
+<meta name="twitter:image" content="http://jigsawye.com/2015/11/30/running-react-native-on-device/01.png">
+<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div id="mask" style="display: none;"><img id="mask-image" src="#" style=" "></div><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_self" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_self" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">在 iDevice 上執行 React Native（不需付費）</h1><div class="post-time">2015年11月30日</div><div class="post-content"><p>之前在練著寫 React Native 時詢問過開發 iOS 的朋友，能不能將 App 燒至自己的裝置上。當時好像因為 Apple 規範的關係，必須加入 <a href="https://developer.apple.com/programs/" target="_blank" rel="external">Developer Program</a> 並 <strong>年付 $99</strong> 取得憑證才行。而因為我沒有打算上架到 App Store 上所以只好放棄付錢作罷。</p>
+<p>最近剛好想寫一些自己的工具，又試著上網找了一下資料，發現在 XCode 7 之後已經開放未付費也可以燒至裝置上了，因此紀錄一下。</p>
+<a id="more"></a>
+<!-- toc -->
+<h2 id="加入-Apple-ID-至-XCode"><a href="#加入-Apple-ID-至-XCode" class="headerlink" title="加入 Apple ID 至 XCode"></a>加入 Apple ID 至 XCode</h2><p>將 iDevice 透過 USB 連接，並在 XCode 選擇你的裝置：</p>
+<img src="/2015/11/30/running-react-native-on-device/01.png" alt="01.png" title="">
+<p>按工具列的執行或 cmd + R 執行，接著會跳出錯誤告知你需要有效的憑證，這邊我們點 <strong>Fix issue</strong>：</p>
+<img src="/2015/11/30/running-react-native-on-device/02.png" alt="02.png" title="">
+<p>如果你沒有 Apple ID 或是還沒加入 Developer Program，就選左邊的 <strong>Join a Program</strong>，如果你已經有了，就選擇 <strong>Add</strong> 並填入你的 Apple ID：</p>
+<img src="/2015/11/30/running-react-native-on-device/03.png" alt="03.png" title="">
+<p>接著你就可以看到帳號已經加入完成：</p>
+<img src="/2015/11/30/running-react-native-on-device/04.png" alt="04.png" title="">
+<h2 id="將-App-Build-至-iDevice-上"><a href="#將-App-Build-至-iDevice-上" class="headerlink" title="將 App Build 至 iDevice 上"></a>將 App Build 至 iDevice 上</h2><p>接著我們在 Build 一次，又跳出了一個錯誤，得知是安全性的問題：</p>
+<img src="/2015/11/30/running-react-native-on-device/05.png" alt="05.png" title="">
+<p>打開你的裝置，依序選擇 <strong>設定</strong>-&gt;<strong>一般</strong>-&gt;<strong>描述檔</strong>-&gt;<code>你的 Apple ID</code>-&gt;<strong>信任「<code>你的 Apple ID</code>」</strong>：</p>
+<img src="/2015/11/30/running-react-native-on-device/06.png" alt="06.png" title="">
+<h2 id="執行你的-App"><a href="#執行你的-App" class="headerlink" title="執行你的 App"></a>執行你的 App</h2><p>完成後就可以執行你的 App 了，然後又出現了錯誤，因為路徑是 localhost，所以讀不到 bundle 檔案：</p>
+<img src="/2015/11/30/running-react-native-on-device/07.png" alt="07.png" title="">
+<p>打開 XCode，在你的 Project 裡找到 <code>AppDelgate.m</code> 檔案，將 <code>jsCodeLocation</code> 中的 <code>localhost</code> 修改成你的 IP：</p>
+<img src="/2015/11/30/running-react-native-on-device/08.png" alt="08.png" title="">
+<h2 id="Done"><a href="#Done" class="headerlink" title="Done!"></a>Done!</h2><p>完成！別忘了搖晃裝置可以叫出 dev menu，記得打開 Live Reload 讓開發更方便！</p>
+<img src="/2015/11/30/running-react-native-on-device/09.png" alt="09.png" title="">
+</div></article></div></section><footer><div class="paginator"><a href="/2015/12/06/prevent-ssh-disconnect/" class="prev">上一篇</a><a href="/2015/11/29/instruction-with-redux/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'jigsawnotes';
+var disqus_identifier = '2015/11/30/running-react-native-on-device/';
+var disqus_title = '在 iDevice 上執行 React Native（不需付費）';
+var disqus_url = 'http://jigsawye.com/2015/11/30/running-react-native-on-device/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//jigsawnotes.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2016 <a href="http://jigsawye.com">Evan Ye</a>, unless otherwise noted.</p></div></footer></div><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-57230871-3",'auto');ga('send','pageview');</script><script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
