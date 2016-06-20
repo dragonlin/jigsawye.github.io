@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://jigsawye.com/"/>
-  <updated>2016-04-19T12:37:59.000Z</updated>
+  <updated>2016-06-20T14:46:22.000Z</updated>
   <id>http://jigsawye.com/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 OSX 使用 Fish shell 取代 bash/zsh</title>
+    <link href="http://jigsawye.com/2016/06/20/install-fish-shell-on-os-x/"/>
+    <id>http://jigsawye.com/2016/06/20/install-fish-shell-on-os-x/</id>
+    <published>2016-06-20T14:46:22.000Z</published>
+    <updated>2016-06-20T14:46:22.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在 Mac 上用 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;zsh&lt;/a&gt; 已經有一陣子了，最讓我詬病的就是 zsh 的 auto suggestion 及 auto completion 速度相當慢，而且有一些很奇怪的問題（bugs?）。最近 &lt;a href=&quot;https://fishshell.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;fish&lt;/a&gt; 這個 shell 好像很紅，索性就把 zsh 換成 fish 了。&lt;/p&gt;
+&lt;p&gt;裝完後不只速度 ++，連 plugin / theme 的套件管理都有（&lt;a href=&quot;https://github.com/oh-my-fish/oh-my-fish&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;oh-my-fish&lt;/a&gt;），使用起來相當快速方便，要說缺點呢，就是與 bash 不相容，所以很常在寫 bash 的捧油只能看看囉。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;fish&quot;&gt;&lt;a href=&quot;#fish&quot; class=&quot;headerlink&quot; title=&quot;fish&quot;&gt;&lt;/a&gt;fish&lt;/h2&gt;&lt;h4 id=&quot;Installation&quot;&gt;&lt;a href=&quot;#Installation&quot; class=&quot;headerlink&quot; title=&quot;Installation&quot;&gt;&lt;/a&gt;Installation&lt;/h4&gt;&lt;p&gt;只要用 homebrew 安裝即可：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install fish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Usage&quot;&gt;&lt;a href=&quot;#Usage&quot; class=&quot;headerlink&quot; title=&quot;Usage&quot;&gt;&lt;/a&gt;Usage&lt;/h4&gt;&lt;p&gt;不論你預設是 bash 還是 zsh，執行 &lt;code&gt;fish&lt;/code&gt; 就能切到 fish shell 了。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ fish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Set-fish-as-default-shell&quot;&gt;&lt;a href=&quot;#Set-fish-as-default-shell&quot; class=&quot;headerlink&quot; title=&quot;Set fish as default shell&quot;&gt;&lt;/a&gt;Set fish as default shell&lt;/h4&gt;&lt;p&gt;當然不可能每次開 terminal 就切換一次，我們可以把 fish 改成 terminal 的 default shell：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;/usr/local/bin/fish&quot;&lt;/span&gt; | sudo tee &lt;span class=&quot;_&quot;&gt;-a&lt;/span&gt; /etc/shells&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ chsh &lt;span class=&quot;_&quot;&gt;-s&lt;/span&gt; /usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;/bin/fish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;oh-my-fish&quot;&gt;&lt;a href=&quot;#oh-my-fish&quot; class=&quot;headerlink&quot; title=&quot;oh-my-fish&quot;&gt;&lt;/a&gt;oh-my-fish&lt;/h2&gt;&lt;p&gt;&lt;code&gt;oh-my-fish&lt;/code&gt; 跟 &lt;code&gt;oh-my-zsh&lt;/code&gt; 用起來是截然不同的感受，oh-my-zsh 是把 plugins 全部都裝好了，只需要啟動，oh-my-fish 用起來則像是 &lt;code&gt;npm&lt;/code&gt; 或 &lt;code&gt;composer&lt;/code&gt; 的套件管理器一樣。&lt;/p&gt;
+&lt;h4 id=&quot;Installation-1&quot;&gt;&lt;a href=&quot;#Installation-1&quot; class=&quot;headerlink&quot; title=&quot;Installation&quot;&gt;&lt;/a&gt;Installation&lt;/h4&gt;&lt;p&gt;curl 拉下來丟給 fish 就行了：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Usage-1&quot;&gt;&lt;a href=&quot;#Usage-1&quot; class=&quot;headerlink&quot; title=&quot;Usage&quot;&gt;&lt;/a&gt;Usage&lt;/h4&gt;&lt;p&gt;直接看官方 README 吧：&lt;a href=&quot;https://github.com/oh-my-fish/oh-my-fish&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/oh-my-fish/oh-my-fish&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;額外補充&quot;&gt;&lt;a href=&quot;#額外補充&quot; class=&quot;headerlink&quot; title=&quot;額外補充&quot;&gt;&lt;/a&gt;額外補充&lt;/h2&gt;&lt;p&gt;如果你有在使用 nvm 的話，因為 nvm 是透過 &lt;code&gt;source ~/.nvm/nvm.sh&lt;/code&gt;，但因為 fish 不支援 bash，所以這支檔案裡的 shell 會直接爆給你看。&lt;/p&gt;
+&lt;p&gt;要解決這個問題的話直接透過 oh-my-fish 安裝 nvm 的 &lt;a href=&quot;https://github.com/derekstavis/plugin-nvm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;plugin&lt;/a&gt; 即可：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ omf install nvm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 Mac 上用 &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;zsh&lt;/a&gt; 已經有一陣子了，最讓我詬病的就是 zsh 的 auto suggestion 及 auto completion 速度相當慢，而且有一些很奇怪的問題（bugs?）。最近 &lt;a href=&quot;https://fishshell.com/&quot;&gt;fish&lt;/a&gt; 這個 shell 好像很紅，索性就把 zsh 換成 fish 了。&lt;/p&gt;
+&lt;p&gt;裝完後不只速度 ++，連 plugin / theme 的套件管理都有（&lt;a href=&quot;https://github.com/oh-my-fish/oh-my-fish&quot;&gt;oh-my-fish&lt;/a&gt;），使用起來相當快速方便，要說缺點呢，就是與 bash 不相容，所以很常在寫 bash 的捧油只能看看囉。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="-note" scheme="http://jigsawye.com/categories/note/"/>
+    
+    
+      <category term="-terminal" scheme="http://jigsawye.com/tags/terminal/"/>
+    
+  </entry>
   
   <entry>
     <title>告別 JavaScript 的 Promise！迎接 Async/Await 的到來</title>
