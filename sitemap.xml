@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/</loc>
+    
+    <lastmod>2017-01-10T10:05:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/</loc>
+    
+    <lastmod>2017-01-10T10:03:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/</loc>
+    
+    <lastmod>2017-01-10T10:01:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/</loc>
+    
+    <lastmod>2017-01-10T09:37:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jigsawye.com/about/index.html</loc>
     
     <lastmod>2017-01-10T09:09:31.000Z</lastmod>
@@ -37,23 +65,9 @@
   </url>
   
   <url>
-    <loc>http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/</loc>
-    
-    <lastmod>2016-02-04T06:09:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jigsawye.com/2015/11/30/running-react-native-on-device/</loc>
     
     <lastmod>2016-02-04T06:06:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/</loc>
-    
-    <lastmod>2016-02-03T11:16:29.000Z</lastmod>
     
   </url>
   
@@ -68,13 +82,6 @@
     <loc>http://jigsawye.com/2015/10/05/jsdc-2015-day-1/</loc>
     
     <lastmod>2016-01-18T12:01:23.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/</loc>
-    
-    <lastmod>2016-01-18T12:00:47.000Z</lastmod>
     
   </url>
   
@@ -103,13 +110,6 @@
     <loc>http://jigsawye.com/2015/11/29/instruction-with-redux/</loc>
     
     <lastmod>2015-11-30T18:05:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/</loc>
-    
-    <lastmod>2015-11-30T18:05:36.000Z</lastmod>
     
   </url>
   

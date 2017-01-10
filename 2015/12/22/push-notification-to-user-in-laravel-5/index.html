@@ -1,23 +1,31 @@
-<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>在 laravel 5 實作瀏覽器推播通知 · JIGSAWYE</title><meta name="description" content="在 laravel 5 實作瀏覽器推播通知 - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="今天在逛 PHPHub 時剛好看到這篇，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。
-本文的原始碼">
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>在 laravel 5 實作瀏覽器推播通知 · JIGSAWYE</title><meta name="description" content="在 laravel 5 實作瀏覽器推播通知 - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="更新於 2017/1/10：Laravel 官方已推出 Laravel Echo，可簡化整個建置流程，有興趣可前往參考。
+
+今天在逛 PHPHub 時剛好看到這篇，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。
+本文">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="在 laravel 5 實作瀏覽器推播通知">
 <meta property="og:url" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/index.html">
 <meta property="og:site_name" content="JIGSAWYE">
-<meta property="og:description" content="今天在逛 PHPHub 時剛好看到這篇，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。
-本文的原始碼">
+<meta property="og:description" content="更新於 2017/1/10：Laravel 官方已推出 Laravel Echo，可簡化整個建置流程，有興趣可前往參考。
+
+今天在逛 PHPHub 時剛好看到這篇，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。
+本文">
 <meta property="og:image" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/01.png">
 <meta property="og:image" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/test-event.gif">
 <meta property="og:image" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/test-socket.gif">
 <meta property="og:image" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/02.png">
 <meta property="og:image" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/demo.gif">
-<meta property="og:updated_time" content="2016-02-04T06:09:00.000Z">
+<meta property="og:updated_time" content="2017-01-10T10:05:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 laravel 5 實作瀏覽器推播通知">
-<meta name="twitter:description" content="今天在逛 PHPHub 時剛好看到這篇，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。
-本文的原始碼">
+<meta name="twitter:description" content="更新於 2017/1/10：Laravel 官方已推出 Laravel Echo，可簡化整個建置流程，有興趣可前往參考。
+
+今天在逛 PHPHub 時剛好看到這篇，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。
+本文">
 <meta name="twitter:image" content="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/01.png">
-<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在 laravel 5 實作瀏覽器推播通知</h1><div class="post-info">2015年12月22日</div><div class="post-content"><p>今天在逛 <a href="https://phphub.org" target="_blank" rel="external">PHPHub</a> 時剛好看到<a href="https://phphub.org/topics/1585" target="_blank" rel="external">這篇</a>，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。</p>
+<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在 laravel 5 實作瀏覽器推播通知</h1><div class="post-info">2015年12月22日</div><div class="post-content"><div class="tip"><br>更新於 2017/1/10：Laravel 官方已推出 <a href="https://laravel.com/docs/5.3/broadcasting#receiving-broadcasts" target="_blank" rel="external">Laravel Echo</a>，可簡化整個建置流程，有興趣可前往參考。<br></div>
+
+<p>今天在逛 <a href="https://phphub.org" target="_blank" rel="external">PHPHub</a> 時剛好看到<a href="https://phphub.org/topics/1585" target="_blank" rel="external">這篇</a>，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。</p>
 <p><a href="https://github.com/jigsawye/laravel-push-notification-demo" target="_blank" rel="external">本文的原始碼</a></p>
 <a id="more"></a>
 <!-- toc -->

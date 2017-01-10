@@ -1,13 +1,19 @@
-<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境 · JIGSAWYE</title><meta name="description" content="使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境 - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境 · JIGSAWYE</title><meta name="description" content="使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境 - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。
 
-這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Docker 的文章，在這邊也不贅述了。原本在架設的時候想使用 Gitlab + Jen">
+
+本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
+
+這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Do">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境">
 <meta property="og:url" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/index.html">
 <meta property="og:site_name" content="JIGSAWYE">
-<meta property="og:description" content="本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
+<meta property="og:description" content="更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。
 
-這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Docker 的文章，在這邊也不贅述了。原本在架設的時候想使用 Gitlab + Jen">
+
+本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
+
+這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Do">
 <meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/01.png">
 <meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/02.png">
 <meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/03.png">
@@ -20,14 +26,19 @@
 <meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/10.png">
 <meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/11.png">
 <meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/12.png">
-<meta property="og:updated_time" content="2016-01-18T12:00:47.000Z">
+<meta property="og:updated_time" content="2017-01-10T09:37:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境">
-<meta name="twitter:description" content="本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
+<meta name="twitter:description" content="更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。
 
-這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Docker 的文章，在這邊也不贅述了。原本在架設的時候想使用 Gitlab + Jen">
+
+本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
+
+這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Do">
 <meta name="twitter:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/01.png">
-<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境</h1><div class="post-info">2015年9月25日</div><div class="post-content"><blockquote>
+<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境</h1><div class="post-info">2015年9月25日</div><div class="post-content"><div class="tip"><br>更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。<br></div>
+
+<blockquote>
 <p>本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。</p>
 </blockquote>
 <p>這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Docker 的文章，在這邊也不贅述了。<br>原本在架設的時候想使用 Gitlab + Jenkins，不過因專案的需求沒有需要 Jenkins 這麼開放客製化的 CI 工具（其實是我覺得很囉唆一堆東西要設定），剛好 Gitlab 也有提供 CI，需求上也符合，所以就決定使用 Gitlab + Gitlab CI。</p>

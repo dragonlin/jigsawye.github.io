@@ -126,10 +126,13 @@
     <link href="http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/"/>
     <id>http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/</id>
     <published>2016-02-01T09:08:14.000Z</published>
-    <updated>2016-02-03T11:16:29.000Z</updated>
+    <updated>2017-01-10T10:03:36.000Z</updated>
     
-    <content type="html"><![CDATA[<div class="tip"><br>建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。<br></div>
+    <content type="html"><![CDATA[<div class="tip"><br>更新於 2017/1/10：Laravel 官方已推出 <a href="https://laravel.com/docs/5.3/valet" target="_blank" rel="external">Laravel Valet</a>，建議採用 Valet 方式進行安裝。<br></div>
 
+<blockquote>
+<p>建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。</p>
+</blockquote>
 <p>在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 <a href="https://laravel.tw/docs/5.2/homestead" target="_blank" rel="external">Homestead</a>。但 Homestead 其實就是一包很大包的虛擬機再配上 Vargrant，曾幾何時我也是使用 Homestead，但是因為我的小 Macbook Air 實在是受不了虛擬機容量一大包，又吃一堆記憶體。</p>
 <p>雖然標題是寫 Laravel，但是要應用在其他的 PHP Application 也是可行的。本篇就以 Homebrew 為主軸，打造 Laravel 的開發環境。</p>
 <a id="more"></a>
@@ -227,8 +230,11 @@
     
     <summary type="html">
     
-      &lt;div class=&quot;tip&quot;&gt;&lt;br&gt;建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。&lt;br&gt;&lt;/div&gt;
+      &lt;div class=&quot;tip&quot;&gt;&lt;br&gt;更新於 2017/1/10：Laravel 官方已推出 &lt;a href=&quot;https://laravel.com/docs/5.3/valet&quot;&gt;Laravel Valet&lt;/a&gt;，建議採用 Valet 方式進行安裝。&lt;br&gt;&lt;/div&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 &lt;a href=&quot;https://laravel.tw/docs/5.2/homestead&quot;&gt;Homestead&lt;/a&gt;。但 Homestead 其實就是一包很大包的虛擬機再配上 Vargrant，曾幾何時我也是使用 Homestead，但是因為我的小 Macbook Air 實在是受不了虛擬機容量一大包，又吃一堆記憶體。&lt;/p&gt;
 &lt;p&gt;雖然標題是寫 Laravel，但是要應用在其他的 PHP Application 也是可行的。本篇就以 Homebrew 為主軸，打造 Laravel 的開發環境。&lt;/p&gt;
     
@@ -256,9 +262,11 @@
     <link href="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/"/>
     <id>http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/</id>
     <published>2015-12-21T17:01:00.000Z</published>
-    <updated>2016-02-04T06:09:00.000Z</updated>
+    <updated>2017-01-10T10:05:31.000Z</updated>
     
-    <content type="html"><![CDATA[<p>今天在逛 <a href="https://phphub.org" target="_blank" rel="external">PHPHub</a> 時剛好看到<a href="https://phphub.org/topics/1585" target="_blank" rel="external">這篇</a>，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。</p>
+    <content type="html"><![CDATA[<div class="tip"><br>更新於 2017/1/10：Laravel 官方已推出 <a href="https://laravel.com/docs/5.3/broadcasting#receiving-broadcasts" target="_blank" rel="external">Laravel Echo</a>，可簡化整個建置流程，有興趣可前往參考。<br></div>
+
+<p>今天在逛 <a href="https://phphub.org" target="_blank" rel="external">PHPHub</a> 時剛好看到<a href="https://phphub.org/topics/1585" target="_blank" rel="external">這篇</a>，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。</p>
 <p><a href="https://github.com/jigsawye/laravel-push-notification-demo" target="_blank" rel="external">本文的原始碼</a></p>
 <a id="more"></a>
 <!-- toc -->
@@ -349,7 +357,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;今天在逛 &lt;a href=&quot;https://phphub.org&quot;&gt;PHPHub&lt;/a&gt; 時剛好看到&lt;a href=&quot;https://phphub.org/topics/1585&quot;&gt;這篇&lt;/a&gt;，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。&lt;/p&gt;
+      &lt;div class=&quot;tip&quot;&gt;&lt;br&gt;更新於 2017/1/10：Laravel 官方已推出 &lt;a href=&quot;https://laravel.com/docs/5.3/broadcasting#receiving-broadcasts&quot;&gt;Laravel Echo&lt;/a&gt;，可簡化整個建置流程，有興趣可前往參考。&lt;br&gt;&lt;/div&gt;
+
+&lt;p&gt;今天在逛 &lt;a href=&quot;https://phphub.org&quot;&gt;PHPHub&lt;/a&gt; 時剛好看到&lt;a href=&quot;https://phphub.org/topics/1585&quot;&gt;這篇&lt;/a&gt;，想著之前也想做類似 Facebook 的通知服務，剛好之前也有碰過一陣子的 socket.io，所以就試著實做看看了。不過推播通知在手機上是相當常見的，但在 Web 上不知為何卻相當少見，也可能是我見識太淺了，看過的網站太少XD。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/jigsawye/laravel-push-notification-demo&quot;&gt;本文的原始碼&lt;/a&gt;&lt;/p&gt;
     
     </summary>
@@ -575,9 +585,11 @@
     <link href="http://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/"/>
     <id>http://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/</id>
     <published>2015-10-09T18:01:40.000Z</published>
-    <updated>2015-11-30T18:05:36.000Z</updated>
+    <updated>2017-01-10T10:01:42.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<div class="tip"><br>更新於 2017/1/10：Docker 官方已推出 <a href="https://docs.docker.com/docker-for-mac/" target="_blank" rel="external">Docker for Mac</a>，若有需求請前往該站參考，本安裝方式已不適用。<br></div>
+
+<blockquote>
 <p>本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。</p>
 </blockquote>
 <p>雖然 Docker 官方推薦使用 <a href="https://www.docker.com/toolbox" target="_blank" rel="external">Docker Toolbox</a>，不過我個人很不喜歡這種一鍵安裝包，連啟動還要用 GUI。可是動手搜尋 <code>docker via homebrew</code> 之類的關鍵字，出來的結果都是使用舊的 <code>boot2docker</code>（目前為 <code>docker-machine</code>），所以找不到只好自己做個紀錄了。</p>
@@ -597,7 +609,9 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;div class=&quot;tip&quot;&gt;&lt;br&gt;更新於 2017/1/10：Docker 官方已推出 &lt;a href=&quot;https://docs.docker.com/docker-for-mac/&quot;&gt;Docker for Mac&lt;/a&gt;，若有需求請前往該站參考，本安裝方式已不適用。&lt;br&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
 &lt;p&gt;本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;雖然 Docker 官方推薦使用 &lt;a href=&quot;https://www.docker.com/toolbox&quot;&gt;Docker Toolbox&lt;/a&gt;，不過我個人很不喜歡這種一鍵安裝包，連啟動還要用 GUI。可是動手搜尋 &lt;code&gt;docker via homebrew&lt;/code&gt; 之類的關鍵字，出來的結果都是使用舊的 &lt;code&gt;boot2docker&lt;/code&gt;（目前為 &lt;code&gt;docker-machine&lt;/code&gt;），所以找不到只好自己做個紀錄了。&lt;/p&gt;
@@ -762,9 +776,11 @@
     <link href="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/"/>
     <id>http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/</id>
     <published>2015-09-25T11:23:30.000Z</published>
-    <updated>2016-01-18T12:00:47.000Z</updated>
+    <updated>2017-01-10T09:37:29.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<div class="tip"><br>更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。<br></div>
+
+<blockquote>
 <p>本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。</p>
 </blockquote>
 <p>這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Docker 的文章，在這邊也不贅述了。<br>原本在架設的時候想使用 Gitlab + Jenkins，不過因專案的需求沒有需要 Jenkins 這麼開放客製化的 CI 工具（其實是我覺得很囉唆一堆東西要設定），剛好 Gitlab 也有提供 CI，需求上也符合，所以就決定使用 Gitlab + Gitlab CI。</p>
@@ -841,7 +857,9 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;div class=&quot;tip&quot;&gt;&lt;br&gt;更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。&lt;br&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
 &lt;p&gt;本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Docker 的文章，在這邊也不贅述了。&lt;br&gt;原本在架設的時候想使用 Gitlab + Jenkins，不過因專案的需求沒有需要 Jenkins 這麼開放客製化的 CI 工具（其實是我覺得很囉唆一堆東西要設定），剛好 Gitlab 也有提供 CI，需求上也符合，所以就決定使用 Gitlab + Gitlab CI。&lt;/p&gt;

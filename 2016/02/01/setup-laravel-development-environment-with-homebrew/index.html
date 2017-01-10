@@ -1,21 +1,33 @@
-<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境 · JIGSAWYE</title><meta name="description" content="在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境 - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。
+<!DOCTYPE html><html lang="zh-tw"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境 · JIGSAWYE</title><meta name="description" content="在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境 - Evan Ye"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><meta name="description" content="更新於 2017/1/10：Laravel 官方已推出 Laravel Valet，建議採用 Valet 方式進行安裝。
 
-在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 Homestead。但 Homestead 其實就是一包很大包的虛擬機再配上 Vargrant，曾幾何時我也是使用 Homestead，但是因為我的小 Macbook Air 實在是受不了虛擬機容量一">
+
+建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。
+
+在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 Homestead。但 Homestead 其實就是一包很大包的虛擬機再配">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境">
 <meta property="og:url" content="http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/index.html">
 <meta property="og:site_name" content="JIGSAWYE">
-<meta property="og:description" content="建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。
+<meta property="og:description" content="更新於 2017/1/10：Laravel 官方已推出 Laravel Valet，建議採用 Valet 方式進行安裝。
 
-在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 Homestead。但 Homestead 其實就是一包很大包的虛擬機再配上 Vargrant，曾幾何時我也是使用 Homestead，但是因為我的小 Macbook Air 實在是受不了虛擬機容量一">
-<meta property="og:updated_time" content="2016-02-03T11:16:29.000Z">
+
+建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。
+
+在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 Homestead。但 Homestead 其實就是一包很大包的虛擬機再配">
+<meta property="og:updated_time" content="2017-01-10T10:03:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境">
-<meta name="twitter:description" content="建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。
+<meta name="twitter:description" content="更新於 2017/1/10：Laravel 官方已推出 Laravel Valet，建議採用 Valet 方式進行安裝。
 
-在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 Homestead。但 Homestead 其實就是一包很大包的虛擬機再配上 Vargrant，曾幾何時我也是使用 Homestead，但是因為我的小 Macbook Air 實在是受不了虛擬機容量一">
-<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境</h1><div class="post-info">2016年2月1日</div><div class="post-content"><div class="tip"><br>建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。<br></div>
 
+建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。
+
+在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 Homestead。但 Homestead 其實就是一包很大包的虛擬機再配">
+<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">Home</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">Archive</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="Github" title="Github" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境</h1><div class="post-info">2016年2月1日</div><div class="post-content"><div class="tip"><br>更新於 2017/1/10：Laravel 官方已推出 <a href="https://laravel.com/docs/5.3/valet" target="_blank" rel="external">Laravel Valet</a>，建議採用 Valet 方式進行安裝。<br></div>
+
+<blockquote>
+<p>建議你熟悉 Terminal 的操作再參考本篇，否則容易把系統環境搞亂。</p>
+</blockquote>
 <p>在開發 Laravel Application 時，新手可能使用 *AMP 的系統環境整合包，而大多數人會選擇官方所提供的 <a href="https://laravel.tw/docs/5.2/homestead" target="_blank" rel="external">Homestead</a>。但 Homestead 其實就是一包很大包的虛擬機再配上 Vargrant，曾幾何時我也是使用 Homestead，但是因為我的小 Macbook Air 實在是受不了虛擬機容量一大包，又吃一堆記憶體。</p>
 <p>雖然標題是寫 Laravel，但是要應用在其他的 PHP Application 也是可行的。本篇就以 Homebrew 為主軸，打造 Laravel 的開發環境。</p>
 <a id="more"></a>
