@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://jigsawye.com/"/>
+  <link href="https://jigsawye.com/"/>
   <updated>2016-06-21T04:39:50.000Z</updated>
-  <id>http://jigsawye.com/</id>
+  <id>https://jigsawye.com/</id>
   
   <author>
     <name>Evan Ye</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>在 OSX 使用 Fish shell 取代 bash/zsh</title>
-    <link href="http://jigsawye.com/2016/06/20/install-fish-shell-on-os-x/"/>
-    <id>http://jigsawye.com/2016/06/20/install-fish-shell-on-os-x/</id>
+    <link href="https://jigsawye.com/2016/06/20/install-fish-shell-on-os-x/"/>
+    <id>https://jigsawye.com/2016/06/20/install-fish-shell-on-os-x/</id>
     <published>2016-06-20T14:46:22.000Z</published>
     <updated>2016-06-21T04:39:50.000Z</updated>
     
@@ -55,17 +55,17 @@
     
     </summary>
     
-      <category term="-note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="-note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="-terminal" scheme="http://jigsawye.com/tags/terminal/"/>
+      <category term="-terminal" scheme="https://jigsawye.com/tags/terminal/"/>
     
   </entry>
   
   <entry>
     <title>告別 JavaScript 的 Promise！迎接 Async/Await 的到來</title>
-    <link href="http://jigsawye.com/2016/04/18/understanding-javascript-async-await/"/>
-    <id>http://jigsawye.com/2016/04/18/understanding-javascript-async-await/</id>
+    <link href="https://jigsawye.com/2016/04/18/understanding-javascript-async-await/"/>
+    <id>https://jigsawye.com/2016/04/18/understanding-javascript-async-await/</id>
     <published>2016-04-18T11:33:55.000Z</published>
     <updated>2016-04-19T12:37:59.000Z</updated>
     
@@ -108,23 +108,23 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://jigsawye.com/categories/tutorial/"/>
+      <category term="tutorial" scheme="https://jigsawye.com/categories/tutorial/"/>
     
     
-      <category term="nodejs" scheme="http://jigsawye.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://jigsawye.com/tags/nodejs/"/>
     
-      <category term="javascript" scheme="http://jigsawye.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://jigsawye.com/tags/javascript/"/>
     
-      <category term="es2015" scheme="http://jigsawye.com/tags/es2015/"/>
+      <category term="es2015" scheme="https://jigsawye.com/tags/es2015/"/>
     
-      <category term="es2016" scheme="http://jigsawye.com/tags/es2016/"/>
+      <category term="es2016" scheme="https://jigsawye.com/tags/es2016/"/>
     
   </entry>
   
   <entry>
     <title>在 OSX 使用 Homebrew 打造精巧的 Laravel 開發環境</title>
-    <link href="http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/"/>
-    <id>http://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/</id>
+    <link href="https://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/"/>
+    <id>https://jigsawye.com/2016/02/01/setup-laravel-development-environment-with-homebrew/</id>
     <published>2016-02-01T09:08:14.000Z</published>
     <updated>2017-01-10T10:03:36.000Z</updated>
     
@@ -240,27 +240,27 @@
     
     </summary>
     
-      <category term="notes" scheme="http://jigsawye.com/categories/notes/"/>
+      <category term="notes" scheme="https://jigsawye.com/categories/notes/"/>
     
     
-      <category term="terminal" scheme="http://jigsawye.com/tags/terminal/"/>
+      <category term="terminal" scheme="https://jigsawye.com/tags/terminal/"/>
     
-      <category term="php" scheme="http://jigsawye.com/tags/php/"/>
+      <category term="php" scheme="https://jigsawye.com/tags/php/"/>
     
-      <category term="laravel" scheme="http://jigsawye.com/tags/laravel/"/>
+      <category term="laravel" scheme="https://jigsawye.com/tags/laravel/"/>
     
-      <category term="mariadb" scheme="http://jigsawye.com/tags/mariadb/"/>
+      <category term="mariadb" scheme="https://jigsawye.com/tags/mariadb/"/>
     
-      <category term="redis" scheme="http://jigsawye.com/tags/redis/"/>
+      <category term="redis" scheme="https://jigsawye.com/tags/redis/"/>
     
-      <category term="homebrew" scheme="http://jigsawye.com/tags/homebrew/"/>
+      <category term="homebrew" scheme="https://jigsawye.com/tags/homebrew/"/>
     
   </entry>
   
   <entry>
     <title>在 laravel 5 實作瀏覽器推播通知</title>
-    <link href="http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/"/>
-    <id>http://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/</id>
+    <link href="https://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/"/>
+    <id>https://jigsawye.com/2015/12/22/push-notification-to-user-in-laravel-5/</id>
     <published>2015-12-21T17:01:00.000Z</published>
     <updated>2017-01-10T10:05:31.000Z</updated>
     
@@ -364,27 +364,27 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://jigsawye.com/categories/tutorial/"/>
+      <category term="tutorial" scheme="https://jigsawye.com/categories/tutorial/"/>
     
     
-      <category term="javascript" scheme="http://jigsawye.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://jigsawye.com/tags/javascript/"/>
     
-      <category term="php" scheme="http://jigsawye.com/tags/php/"/>
+      <category term="php" scheme="https://jigsawye.com/tags/php/"/>
     
-      <category term="laravel" scheme="http://jigsawye.com/tags/laravel/"/>
+      <category term="laravel" scheme="https://jigsawye.com/tags/laravel/"/>
     
-      <category term="laravel5" scheme="http://jigsawye.com/tags/laravel5/"/>
+      <category term="laravel5" scheme="https://jigsawye.com/tags/laravel5/"/>
     
-      <category term="notification" scheme="http://jigsawye.com/tags/notification/"/>
+      <category term="notification" scheme="https://jigsawye.com/tags/notification/"/>
     
-      <category term="socket-io" scheme="http://jigsawye.com/tags/socket-io/"/>
+      <category term="socket-io" scheme="https://jigsawye.com/tags/socket-io/"/>
     
   </entry>
   
   <entry>
     <title>在 OSX 的終端機正常瀏覽 PTT</title>
-    <link href="http://jigsawye.com/2015/12/06/ptt-in-osx-terminal/"/>
-    <id>http://jigsawye.com/2015/12/06/ptt-in-osx-terminal/</id>
+    <link href="https://jigsawye.com/2015/12/06/ptt-in-osx-terminal/"/>
+    <id>https://jigsawye.com/2015/12/06/ptt-in-osx-terminal/</id>
     <published>2015-12-06T12:21:51.000Z</published>
     <updated>2016-01-18T11:58:25.000Z</updated>
     
@@ -401,17 +401,17 @@
     
     </summary>
     
-      <category term="note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="terminal" scheme="http://jigsawye.com/tags/terminal/"/>
+      <category term="terminal" scheme="https://jigsawye.com/tags/terminal/"/>
     
   </entry>
   
   <entry>
     <title>防止 SSH 因長時間未動作而斷線</title>
-    <link href="http://jigsawye.com/2015/12/06/prevent-ssh-disconnect/"/>
-    <id>http://jigsawye.com/2015/12/06/prevent-ssh-disconnect/</id>
+    <link href="https://jigsawye.com/2015/12/06/prevent-ssh-disconnect/"/>
+    <id>https://jigsawye.com/2015/12/06/prevent-ssh-disconnect/</id>
     <published>2015-12-06T12:11:11.000Z</published>
     <updated>2015-12-06T12:25:49.000Z</updated>
     
@@ -428,17 +428,17 @@
     
     </summary>
     
-      <category term="note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="terminal" scheme="http://jigsawye.com/tags/terminal/"/>
+      <category term="terminal" scheme="https://jigsawye.com/tags/terminal/"/>
     
   </entry>
   
   <entry>
     <title>在 iDevice 上執行 React Native（不需付費）</title>
-    <link href="http://jigsawye.com/2015/11/30/running-react-native-on-device/"/>
-    <id>http://jigsawye.com/2015/11/30/running-react-native-on-device/</id>
+    <link href="https://jigsawye.com/2015/11/30/running-react-native-on-device/"/>
+    <id>https://jigsawye.com/2015/11/30/running-react-native-on-device/</id>
     <published>2015-11-30T15:16:22.000Z</published>
     <updated>2016-02-04T06:06:55.000Z</updated>
     
@@ -473,23 +473,23 @@
     
     </summary>
     
-      <category term="note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="react" scheme="http://jigsawye.com/tags/react/"/>
+      <category term="react" scheme="https://jigsawye.com/tags/react/"/>
     
-      <category term="react-native" scheme="http://jigsawye.com/tags/react-native/"/>
+      <category term="react-native" scheme="https://jigsawye.com/tags/react-native/"/>
     
-      <category term="xcode" scheme="http://jigsawye.com/tags/xcode/"/>
+      <category term="xcode" scheme="https://jigsawye.com/tags/xcode/"/>
     
-      <category term="ios" scheme="http://jigsawye.com/tags/ios/"/>
+      <category term="ios" scheme="https://jigsawye.com/tags/ios/"/>
     
   </entry>
   
   <entry>
     <title>Redux 起手式：Actions、Reducers 及 Store</title>
-    <link href="http://jigsawye.com/2015/11/29/instruction-with-redux/"/>
-    <id>http://jigsawye.com/2015/11/29/instruction-with-redux/</id>
+    <link href="https://jigsawye.com/2015/11/29/instruction-with-redux/"/>
+    <id>https://jigsawye.com/2015/11/29/instruction-with-redux/</id>
     <published>2015-11-29T03:23:33.000Z</published>
     <updated>2015-11-30T18:05:49.000Z</updated>
     
@@ -537,21 +537,21 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://jigsawye.com/categories/tutorial/"/>
+      <category term="tutorial" scheme="https://jigsawye.com/categories/tutorial/"/>
     
     
-      <category term="react" scheme="http://jigsawye.com/tags/react/"/>
+      <category term="react" scheme="https://jigsawye.com/tags/react/"/>
     
-      <category term="javascript" scheme="http://jigsawye.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://jigsawye.com/tags/javascript/"/>
     
-      <category term="redux" scheme="http://jigsawye.com/tags/redux/"/>
+      <category term="redux" scheme="https://jigsawye.com/tags/redux/"/>
     
   </entry>
   
   <entry>
     <title>在 Sublime Text 的 JSX 中使用 Emmet</title>
-    <link href="http://jigsawye.com/2015/11/23/enable-emmet-for-jsx-in-sublime/"/>
-    <id>http://jigsawye.com/2015/11/23/enable-emmet-for-jsx-in-sublime/</id>
+    <link href="https://jigsawye.com/2015/11/23/enable-emmet-for-jsx-in-sublime/"/>
+    <id>https://jigsawye.com/2015/11/23/enable-emmet-for-jsx-in-sublime/</id>
     <published>2015-11-23T07:45:20.000Z</published>
     <updated>2016-01-18T12:00:07.000Z</updated>
     
@@ -569,21 +569,21 @@
     
     </summary>
     
-      <category term="note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="react" scheme="http://jigsawye.com/tags/react/"/>
+      <category term="react" scheme="https://jigsawye.com/tags/react/"/>
     
-      <category term="jsx" scheme="http://jigsawye.com/tags/jsx/"/>
+      <category term="jsx" scheme="https://jigsawye.com/tags/jsx/"/>
     
-      <category term="sublime" scheme="http://jigsawye.com/tags/sublime/"/>
+      <category term="sublime" scheme="https://jigsawye.com/tags/sublime/"/>
     
   </entry>
   
   <entry>
     <title>在 Mac 上使用 Homebrew 安裝 Docker</title>
-    <link href="http://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/"/>
-    <id>http://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/</id>
+    <link href="https://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/"/>
+    <id>https://jigsawye.com/2015/10/10/install-docker-on-mac-via-homebrew/</id>
     <published>2015-10-09T18:01:40.000Z</published>
     <updated>2017-01-10T10:01:42.000Z</updated>
     
@@ -618,19 +618,19 @@
     
     </summary>
     
-      <category term="note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="docker" scheme="http://jigsawye.com/tags/docker/"/>
+      <category term="docker" scheme="https://jigsawye.com/tags/docker/"/>
     
-      <category term="terminal" scheme="http://jigsawye.com/tags/terminal/"/>
+      <category term="terminal" scheme="https://jigsawye.com/tags/terminal/"/>
     
   </entry>
   
   <entry>
     <title>JSDC 2015 會後筆記（Day 2）</title>
-    <link href="http://jigsawye.com/2015/10/07/jsdc-2015-day-2/"/>
-    <id>http://jigsawye.com/2015/10/07/jsdc-2015-day-2/</id>
+    <link href="https://jigsawye.com/2015/10/07/jsdc-2015-day-2/"/>
+    <id>https://jigsawye.com/2015/10/07/jsdc-2015-day-2/</id>
     <published>2015-10-07T03:23:00.000Z</published>
     <updated>2016-01-18T12:01:29.000Z</updated>
     
@@ -673,21 +673,21 @@
     
     </summary>
     
-      <category term="life" scheme="http://jigsawye.com/categories/life/"/>
+      <category term="life" scheme="https://jigsawye.com/categories/life/"/>
     
     
-      <category term="jsdc-2015" scheme="http://jigsawye.com/tags/jsdc-2015/"/>
+      <category term="jsdc-2015" scheme="https://jigsawye.com/tags/jsdc-2015/"/>
     
-      <category term="jsdc" scheme="http://jigsawye.com/tags/jsdc/"/>
+      <category term="jsdc" scheme="https://jigsawye.com/tags/jsdc/"/>
     
-      <category term="conference" scheme="http://jigsawye.com/tags/conference/"/>
+      <category term="conference" scheme="https://jigsawye.com/tags/conference/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript 的 Object.assign 陷阱</title>
-    <link href="http://jigsawye.com/2015/10/06/javascript-object-assign/"/>
-    <id>http://jigsawye.com/2015/10/06/javascript-object-assign/</id>
+    <link href="https://jigsawye.com/2015/10/06/javascript-object-assign/"/>
+    <id>https://jigsawye.com/2015/10/06/javascript-object-assign/</id>
     <published>2015-10-06T10:05:14.000Z</published>
     <updated>2015-10-06T10:51:08.000Z</updated>
     
@@ -714,19 +714,19 @@
     
     </summary>
     
-      <category term="note" scheme="http://jigsawye.com/categories/note/"/>
+      <category term="note" scheme="https://jigsawye.com/categories/note/"/>
     
     
-      <category term="javascript" scheme="http://jigsawye.com/tags/javascript/"/>
+      <category term="javascript" scheme="https://jigsawye.com/tags/javascript/"/>
     
-      <category term="trap" scheme="http://jigsawye.com/tags/trap/"/>
+      <category term="trap" scheme="https://jigsawye.com/tags/trap/"/>
     
   </entry>
   
   <entry>
     <title>JSDC 2015 會後筆記（Day 1）</title>
-    <link href="http://jigsawye.com/2015/10/05/jsdc-2015-day-1/"/>
-    <id>http://jigsawye.com/2015/10/05/jsdc-2015-day-1/</id>
+    <link href="https://jigsawye.com/2015/10/05/jsdc-2015-day-1/"/>
+    <id>https://jigsawye.com/2015/10/05/jsdc-2015-day-1/</id>
     <published>2015-10-05T05:32:21.000Z</published>
     <updated>2016-01-18T12:01:23.000Z</updated>
     
@@ -760,23 +760,23 @@
     
     </summary>
     
-      <category term="life" scheme="http://jigsawye.com/categories/life/"/>
+      <category term="life" scheme="https://jigsawye.com/categories/life/"/>
     
     
-      <category term="jsdc-2015" scheme="http://jigsawye.com/tags/jsdc-2015/"/>
+      <category term="jsdc-2015" scheme="https://jigsawye.com/tags/jsdc-2015/"/>
     
-      <category term="jsdc" scheme="http://jigsawye.com/tags/jsdc/"/>
+      <category term="jsdc" scheme="https://jigsawye.com/tags/jsdc/"/>
     
-      <category term="conference" scheme="http://jigsawye.com/tags/conference/"/>
+      <category term="conference" scheme="https://jigsawye.com/tags/conference/"/>
     
   </entry>
   
   <entry>
     <title>使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境</title>
-    <link href="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/"/>
-    <id>http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/</id>
+    <link href="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/"/>
+    <id>https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/</id>
     <published>2015-09-25T11:23:30.000Z</published>
-    <updated>2017-01-10T09:37:29.000Z</updated>
+    <updated>2017-01-14T16:57:54.000Z</updated>
     
     <content type="html"><![CDATA[<div class="tip"><br>更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。<br></div>
 
@@ -866,25 +866,25 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://jigsawye.com/categories/tutorial/"/>
+      <category term="tutorial" scheme="https://jigsawye.com/categories/tutorial/"/>
     
     
-      <category term="docker" scheme="http://jigsawye.com/tags/docker/"/>
+      <category term="docker" scheme="https://jigsawye.com/tags/docker/"/>
     
-      <category term="source-control" scheme="http://jigsawye.com/tags/source-control/"/>
+      <category term="source-control" scheme="https://jigsawye.com/tags/source-control/"/>
     
-      <category term="continuous-integration" scheme="http://jigsawye.com/tags/continuous-integration/"/>
+      <category term="continuous-integration" scheme="https://jigsawye.com/tags/continuous-integration/"/>
     
-      <category term="devops" scheme="http://jigsawye.com/tags/devops/"/>
+      <category term="devops" scheme="https://jigsawye.com/tags/devops/"/>
     
-      <category term="nodejs" scheme="http://jigsawye.com/tags/nodejs/"/>
+      <category term="nodejs" scheme="https://jigsawye.com/tags/nodejs/"/>
     
   </entry>
   
   <entry>
     <title>在 Laravel 使用 Route Model Binding</title>
-    <link href="http://jigsawye.com/2015/07/23/use-route-model-binding-in-laravel/"/>
-    <id>http://jigsawye.com/2015/07/23/use-route-model-binding-in-laravel/</id>
+    <link href="https://jigsawye.com/2015/07/23/use-route-model-binding-in-laravel/"/>
+    <id>https://jigsawye.com/2015/07/23/use-route-model-binding-in-laravel/</id>
     <published>2015-07-23T08:56:49.000Z</published>
     <updated>2016-02-04T06:11:28.000Z</updated>
     
@@ -924,21 +924,21 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://jigsawye.com/categories/tutorial/"/>
+      <category term="tutorial" scheme="https://jigsawye.com/categories/tutorial/"/>
     
     
-      <category term="laravel" scheme="http://jigsawye.com/tags/laravel/"/>
+      <category term="laravel" scheme="https://jigsawye.com/tags/laravel/"/>
     
-      <category term="laravel5" scheme="http://jigsawye.com/tags/laravel5/"/>
+      <category term="laravel5" scheme="https://jigsawye.com/tags/laravel5/"/>
     
-      <category term="route-model-binding" scheme="http://jigsawye.com/tags/route-model-binding/"/>
+      <category term="route-model-binding" scheme="https://jigsawye.com/tags/route-model-binding/"/>
     
   </entry>
   
   <entry>
     <title>在 Laravel 5 使用 PJAX 加快網頁載入速度</title>
-    <link href="http://jigsawye.com/2015/06/22/using-pjax-with-laravel-5/"/>
-    <id>http://jigsawye.com/2015/06/22/using-pjax-with-laravel-5/</id>
+    <link href="https://jigsawye.com/2015/06/22/using-pjax-with-laravel-5/"/>
+    <id>https://jigsawye.com/2015/06/22/using-pjax-with-laravel-5/</id>
     <published>2015-06-22T03:50:48.000Z</published>
     <updated>2016-02-04T06:12:39.000Z</updated>
     
@@ -980,14 +980,14 @@
     
     </summary>
     
-      <category term="tutorial" scheme="http://jigsawye.com/categories/tutorial/"/>
+      <category term="tutorial" scheme="https://jigsawye.com/categories/tutorial/"/>
     
     
-      <category term="laravel" scheme="http://jigsawye.com/tags/laravel/"/>
+      <category term="laravel" scheme="https://jigsawye.com/tags/laravel/"/>
     
-      <category term="laravel5" scheme="http://jigsawye.com/tags/laravel5/"/>
+      <category term="laravel5" scheme="https://jigsawye.com/tags/laravel5/"/>
     
-      <category term="pjax" scheme="http://jigsawye.com/tags/pjax/"/>
+      <category term="pjax" scheme="https://jigsawye.com/tags/pjax/"/>
     
   </entry>
   

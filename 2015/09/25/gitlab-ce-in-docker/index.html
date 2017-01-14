@@ -6,7 +6,7 @@
 這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Do">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境">
-<meta property="og:url" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/index.html">
+<meta property="og:url" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/index.html">
 <meta property="og:site_name" content="JIGSAWYE">
 <meta property="og:description" content="更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。
 
@@ -14,19 +14,19 @@
 本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
 
 這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Do">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/01.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/02.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/03.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/04.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/05.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/06.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/07.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/08.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/09.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/10.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/11.png">
-<meta property="og:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/12.png">
-<meta property="og:updated_time" content="2017-01-10T09:37:29.000Z">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/01.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/02.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/03.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/04.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/05.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/06.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/07.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/08.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/09.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/10.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/11.png">
+<meta property="og:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/12.png">
+<meta property="og:updated_time" content="2017-01-14T16:57:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境">
 <meta name="twitter:description" content="更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。
@@ -35,8 +35,8 @@
 本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。
 
 這幾天在我們的 imaclab 試著建置 CI 環境，順便就學了 Docker，發現 Docker 這東西真的非常方便，直接把環境都放進 container 裡，也不怕把環境搞爛。對環境建置的苦手真的是一番福音，網路上也很多關於 Do">
-<meta name="twitter:image" content="http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/01.png">
-<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="http://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="GitHub" title="GitHub" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境</h1><div class="post-info">2015年9月25日</div><div class="post-content"><div class="tip"><br>更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。<br></div>
+<meta name="twitter:image" content="https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/01.png">
+<meta property="fb:app_id" content="495983917226031"><meta property="og:image" content="https://avatars1.githubusercontent.com/u/8567270?v=3&amp;s=300"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" type="text/css"><link rel="search" type="application/opensearchdescription+xml" href="https://jigsawye.com/atom.xml" title="JIGSAWYE"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/about/" target="_self" class="nav-list-link">ABOUT</a></li><li class="nav-list-item"><a href="https://github.com/jigsawye" target="_blank" class="nav-list-link"><i alt="GitHub" title="GitHub" class="fa fa-github"></i></a></li><li class="nav-list-item"><a href="https://facebook.com/jigsaw.ye" target="_blank" class="nav-list-link"><i alt="Facebook" title="Facebook" class="fa fa-facebook"></i></a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link"><i alt="RSS" title="RSS" class="fa fa-rss"></i></a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境</h1><div class="post-info">2015年9月25日</div><div class="post-content"><div class="tip"><br>更新於 2017/1/10：此文年久失修，可能有許多情形與現實不符，請斟酌參考。<br></div>
 
 <blockquote>
 <p>本文建議了解 unix-like 基礎指令及 Docker 基本操作者閱讀。</p>
@@ -114,9 +114,9 @@
 </div></article></div></section><footer><div class="paginator"><a href="/2015/10/05/jsdc-2015-day-1/" class="prev">上一篇</a><a href="/2015/07/23/use-route-model-binding-in-laravel/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'jigsawnotes';
 var disqus_identifier = '2015/09/25/gitlab-ce-in-docker/';
 var disqus_title = '使用 Docker 建置 Gitlab CE 的 Source Control 及 CI 環境';
-var disqus_url = 'http://jigsawye.com/2015/09/25/gitlab-ce-in-docker/';
+var disqus_url = 'https://jigsawye.com/2015/09/25/gitlab-ce-in-docker/';
 (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><script id="dsq-count-scr" src="//jigsawnotes.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2017 <a href="http://jigsawye.com">Evan Ye</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-57230871-3",'auto');ga('send','pageview');</script></body></html>
+})();</script><script id="dsq-count-scr" src="//jigsawnotes.disqus.com/count.js" async></script><div class="copyright"><p>© 2015 - 2017 <a href="https://jigsawye.com">Evan Ye</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-57230871-3",'auto');ga('send','pageview');</script></body></html>
