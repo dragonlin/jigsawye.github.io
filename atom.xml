@@ -67,7 +67,7 @@
     <link href="https://jigsawye.com/2016/04/18/understanding-javascript-async-await/"/>
     <id>https://jigsawye.com/2016/04/18/understanding-javascript-async-await/</id>
     <published>2016-04-18T11:33:55.000Z</published>
-    <updated>2017-01-27T16:00:38.000Z</updated>
+    <updated>2017-01-27T16:05:28.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近在做一個自己的 <a href="https://github.com/jigsawye/koa2-boilerplate" target="_blank" rel="external">API boilerplate</a>，選用了 <a href="https://github.com/koajs/koa" target="_blank" rel="external">koa</a> 這個 library。而其中除了 stable 的 <code>1.x</code> 外，它還 release <code>2.x</code>！有什麼不同呢？<code>1.x</code> 是用 generator 來實作，而到了 <code>2.x</code> 竟然是用 Async/Await！身為一個熱血碼農，怎能錯過這個進場 Async/Await 的大好機會 XD。</p>
 <a id="more"></a>
@@ -94,6 +94,8 @@
 <p>或是將 <code>transform-async-to-generator</code> 加入 plugins 就行了：</p>
 <figure class="highlight json"><figcaption><span>.bebalrc</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [<span class="string">"es2015"</span>],</div><div class="line">  <span class="attr">"plugins"</span>: [<span class="string">"transform-async-to-generator"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h4 id="在後端"><a href="#在後端" class="headerlink" title="在後端"></a>在後端</h4><p>在 backend 的情況則比較不同，雖然一樣要透過 babel，不過請裝 <a href="babel-preset-es2015-node4">es2015-node4</a> 或是 <a href="https://github.com/alekseykulikov/babel-preset-es2015-node5" target="_blank" rel="external">es2015-node5</a>（根據你的 node 版本做選擇），其餘則跟前端一樣。</p>
+<div class="tip"><br>  Node 7.0.0 起已經支援 Async/Await，建議直接更新你的 Node 版本！<br></div>
+
 <p>接著如果要讓你的程式能夠執行 Async/Await，請額外建立一個檔案，並 require <code>babel-register</code> 及你程式的 entry：</p>
 <figure class="highlight js"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'babel-register'</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">'../app.js'</span>);</div></pre></td></tr></table></figure>
 <p>接著只要用 node 執行 <code>index.js</code> 就行了。</p>
